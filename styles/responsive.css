@@ -1,0 +1,18 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .search-box,
+    .tabs,
+    .chat-item-info {
+        display: none;
+    }
+
+    .chat-item {
+        justify-content: center;
+        padding: 12px 8px;
+    }
+}
+

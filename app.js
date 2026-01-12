@@ -3,6 +3,7 @@ const chatList = document.getElementById('chatList');
 const messages = document.getElementById('messages');
 const chatName = document.getElementById('chatName');
 const chatAvatar = document.getElementById('chatAvatar');
+const notificationBanner = document.getElementById('notificationBanner');
 
 // State
 let selectedPersonId = null;
@@ -49,6 +50,7 @@ function renderChatList() {
             <div class="chat-item-info">
                 <div class="chat-item-header">
                     <span class="chat-item-name">${person.name}</span>
+                    <span class="chat-item-time">6:06 pm</span>
                 </div>
                 <p class="chat-item-preview">${getPreview(person.kudos[0]?.text || 'No kudos yet')}</p>
             </div>
@@ -80,11 +82,16 @@ function selectPerson(id) {
     chatAvatar.src = person.avatar;
     chatAvatar.alt = person.name;
 
+    // Show notification banner
+    if (notificationBanner) {
+        notificationBanner.style.display = 'flex';
+    }
+
     // Re-render chat list to update read state
     renderChatList();
 
     // Render messages
-    renderMessages(person.kudos);
+    renderMessages(person.kudos, person.avatar);
 }
 
 // Format text with line breaks
@@ -95,7 +102,7 @@ function formatText(text) {
 }
 
 // Render kudos messages
-function renderMessages(kudos) {
+function renderMessages(kudos, avatarSrc) {
     if (kudos.length === 0) {
         messages.innerHTML = `
             <div class="empty-state">
@@ -107,10 +114,14 @@ function renderMessages(kudos) {
     }
 
     messages.innerHTML = `
-        <div class="date-divider"><span>🏆 Highlights & Wins</span></div>
-        ${kudos.map(kudo => `
+        <div class="date-divider"><span>Today</span></div>
+        ${kudos.map((kudo, index) => `
             <div class="message received">
-                <div class="message-text">${formatText(kudo.text)}</div>
+                <img src="${avatarSrc}" alt="" class="avatar">
+                <div class="message-bubble">
+                    <div class="message-text">${formatText(kudo.text)}</div>
+                    <div class="message-time">6:06 pm</div>
+                </div>
             </div>
         `).join('')}
     `;

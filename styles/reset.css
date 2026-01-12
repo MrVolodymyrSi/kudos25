@@ -1,0 +1,21 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+}
+

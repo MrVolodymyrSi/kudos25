@@ -1,0 +1,112 @@
+/* Messages Container */
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: linear-gradient(180deg, #c5daf0 0%, #d9e7f5 100%);
+}
+
+/* Message Item */
+.message {
+    display: flex;
+    gap: 10px;
+    max-width: 70%;
+}
+
+.message.received {
+    align-self: flex-start;
+}
+
+.message.sent {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+/* Message Avatar */
+.message .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e1e3e6;
+    flex-shrink: 0;
+}
+
+/* Message Bubble Container */
+.message-bubble {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message Text Bubble */
+.message-text {
+    background: #ffffff;
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.message.sent .message-text {
+    background: #5181b8;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+.message.received .message-text {
+    border-bottom-left-radius: 4px;
+}
+
+/* Message Timestamp */
+.message-time {
+    font-size: 12px;
+    color: #6d7885;
+    margin-top: 4px;
+    margin-left: 14px;
+}
+
+.message.sent .message-time {
+    text-align: right;
+    margin-right: 14px;
+    margin-left: 0;
+}
+
+/* Date Divider */
+.date-divider {
+    text-align: center;
+    padding: 16px 0;
+    margin: 8px 0;
+}
+
+.date-divider span {
+    background: rgba(176, 203, 230, 0.6);
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #4a76a8;
+    font-weight: 400;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #6d7885;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+

@@ -1,0 +1,16 @@
+/* Avatar Wrapper with Online Indicator */
+.avatar-wrapper {
+    position: relative;
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #4bb34b;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+

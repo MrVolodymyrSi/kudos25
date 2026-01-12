@@ -1,0 +1,132 @@
+/* Chat List Container */
+.chat-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+    background: #ffffff;
+}
+
+/* Chat List Item */
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    gap: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.chat-item:hover {
+    background: #f7f8fa;
+}
+
+.chat-item.active {
+    background: #edf2f6;
+}
+
+/* Chat Item Avatar */
+.chat-item .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e1e3e6;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Chat Item Info Container */
+.chat-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.chat-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    gap: 8px;
+}
+
+/* Chat Item Name */
+.chat-item-name {
+    font-size: 16px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-feature-settings: "liga" 0, "lnum", "pnum";
+}
+
+/* Unread chats have bold names and dark color */
+.chat-item:not(.read) .chat-item-name {
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    height: 20px;
+    line-height: 20px;
+}
+
+/* Read state - lighter text and normal weight */
+.chat-item.read .chat-item-name {
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    height: 20px;
+    line-height: 20px;
+}
+
+/* Chat Item Time */
+.chat-item-time {
+    font-size: 12px;
+    color: #939393;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Chat Item Preview Text */
+.chat-item-preview {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+    line-height: 20px;
+}
+
+/* Unread chat preview - darker text */
+.chat-item:not(.read) .chat-item-preview {
+    color: #6d7885;
+    font-weight: 400;
+}
+
+/* Read chat preview - lighter text */
+.chat-item.read .chat-item-preview {
+    color: #939393;
+    font-weight: 400;
+}
+
+/* Chat Item Badge (unread count) */
+.chat-item-badge {
+    background: #9ba3af;
+    color: white;
+    font-size: 11px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
