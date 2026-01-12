@@ -1,0 +1,11 @@
+{
+  "name": "testvibe",
+  "version": "1.0.0",
+  "description": "A kudos page for giving appreciation",
+  "scripts": {
+    "serve": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true
+}

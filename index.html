@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Guild 25 - Kudos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with chat list -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Search by name" disabled>
+            </div>
+            <nav class="tabs">
+                <button class="tab active">All kudos</button>
+                <button class="tab">Recent</button>
+                <button class="tab badge" data-count="5">New</button>
+            </nav>
+            <ul class="chat-list" id="chatList">
+                <!-- Chat items will be here -->
+            </ul>
+        </aside>
+
+        <!-- Main chat area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="avatar-wrapper">
+                    <img src="" alt="" class="avatar" id="chatAvatar">
+                </div>
+                <h2 class="chat-name" id="chatName">Select a person</h2>
+            </header>
+            <div class="messages" id="messages">
+                <!-- Messages will be rendered here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
