@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background decorative elements -->
+  <circle cx="54" cy="34" r="6" fill="#E5E5E5"/>
+  <circle cx="158" cy="34" r="6" fill="#E5E5E5"/>
+  <circle cx="28" cy="80" r="4" fill="#D0D0D0"/>
+  <circle cx="184" cy="90" r="4" fill="#D0D0D0"/>
+  <line x1="62" y1="64" x2="68" y2="70" stroke="#E5E5E5" stroke-width="2"/>
+  <line x1="68" y1="64" x2="62" y2="70" stroke="#E5E5E5" stroke-width="2"/>
+  <line x1="148" y1="116" x2="154" y2="122" stroke="#E5E5E5" stroke-width="2"/>
+  <line x1="154" y1="116" x2="148" y2="122" stroke="#E5E5E5" stroke-width="2"/>
+  <circle cx="174" cy="42" r="3" fill="#E5E5E5"/>
+
+  <!-- Main magnifying glass circle -->
+  <circle cx="90" cy="85" r="38" fill="#E8F2FA"/>
+  <circle cx="90" cy="85" r="38" stroke="#7FB1D3" stroke-width="8"/>
+
+  <!-- Magnifying glass handle -->
+  <rect x="115" y="115" width="50" height="18" rx="9" transform="rotate(45 115 115)" fill="#7FB1D3"/>
+
+  <!-- Smiley face inside magnifying glass -->
+  <circle cx="82" cy="78" r="4" fill="#2C2D2E"/>
+  <circle cx="98" cy="78" r="4" fill="#2C2D2E"/>
+  <path d="M 78 92 Q 90 100 102 92" stroke="#2C2D2E" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Bottom decorative line -->
+  <line x1="85" y1="165" x2="105" y2="165" stroke="#E5E5E5" stroke-width="3" stroke-linecap="round"/>
+</svg>
+

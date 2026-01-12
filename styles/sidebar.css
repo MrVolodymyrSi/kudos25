@@ -38,6 +38,7 @@
     display: flex;
     padding: 0;
     gap: 0;
+    height: 37px;
     border-bottom: 1px solid #e7e8ec;
     background: #fafbfc;
 }

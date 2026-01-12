@@ -4,9 +4,11 @@ const messages = document.getElementById('messages');
 const chatName = document.getElementById('chatName');
 const chatAvatar = document.getElementById('chatAvatar');
 const notificationBanner = document.getElementById('notificationBanner');
+const searchInput = document.getElementById('searchInput');
 
 // State
 let selectedPersonId = null;
+let searchQuery = '';
 
 // LocalStorage key for read state
 const STORAGE_KEY = 'kudos_read_state';
@@ -41,7 +43,24 @@ function getPreview(text) {
 
 // Render chat list
 function renderChatList() {
-    chatList.innerHTML = kudosData.map(person => {
+    // Filter data by search query
+    const filteredData = kudosData.filter(person =>
+        person.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    // Show empty state if no results
+    if (filteredData.length === 0) {
+        chatList.innerHTML = `
+            <div class="empty-search-state">
+                <img src="assets/empty-search.svg" alt="No results" class="empty-search-icon">
+                <h3>No chat with such user</h3>
+                <p>To start chatting, go ahead and find someone interesting.</p>
+            </div>
+        `;
+        return;
+    }
+
+    chatList.innerHTML = filteredData.map(person => {
         const read = isRead(person.id);
         return `
         <li class="chat-item ${person.id === selectedPersonId ? 'active' : ''} ${read ? 'read' : ''}" 
@@ -115,7 +134,7 @@ function renderMessages(kudos, avatarSrc) {
 
     messages.innerHTML = `
         <div class="date-divider"><span>Today</span></div>
-        ${kudos.map((kudo, index) => `
+        ${kudos.map((kudo) => `
             <div class="message received">
                 <img src="${avatarSrc}" alt="" class="avatar">
                 <div class="message-bubble">
@@ -134,6 +153,14 @@ function init() {
     // Select first person by default
     if (kudosData.length > 0) {
         selectPerson(kudosData[0].id);
+    }
+
+    // Add search input event listener
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderChatList();
+        });
     }
 }
 

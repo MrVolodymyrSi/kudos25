@@ -439,6 +439,36 @@ body {
     font-weight: 500;
 }
 
+/* Empty Search State */
+.empty-search-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-search-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.empty-search-state h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2d2e;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.empty-search-state p {
+    font-size: 14px;
+    color: #6d7885;
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* ==========================================================================
    REUSABLE COMPONENTS - Avatars, Indicators
    ========================================================================== */
