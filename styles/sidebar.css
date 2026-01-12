@@ -38,13 +38,12 @@
     display: flex;
     padding: 0;
     gap: 0;
-    height: 37px;
     border-bottom: 1px solid #e7e8ec;
     background: #fafbfc;
 }
 
 .tab {
-    padding: 4px;
+    padding: 4px 8px;
     border: none;
     background: #ffffff;
     font-size: 14px;
@@ -63,7 +62,7 @@
     text-align: center;
     user-select: none;
     white-space: nowrap;
-    box-shadow: rgb(128, 162, 229) 0px 0px 0px 0px;
+    box-shadow: none;
 }
 
 .tab:hover {

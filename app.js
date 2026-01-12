@@ -103,7 +103,7 @@ function selectPerson(id) {
 
     // Show notification banner
     if (notificationBanner) {
-        notificationBanner.style.display = 'flex';
+        notificationBanner.classList.remove('hidden');
     }
 
     // Re-render chat list to update read state
@@ -117,7 +117,7 @@ function selectPerson(id) {
 function formatText(text) {
     return text
         .replace(/\n/g, '<br>')
-        .replace(/---/g, '<hr style="border: none; border-top: 1px solid #e4e6eb; margin: 8px 0;">');
+        .replace(/---/g, '<hr class="message-separator">');
 }
 
 // Render kudos messages
