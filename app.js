@@ -69,7 +69,7 @@ function renderChatList() {
             <div class="chat-item-info">
                 <div class="chat-item-header">
                     <span class="chat-item-name">${person.name}</span>
-                    <span class="chat-item-time">6:06 pm</span>
+                    <span class="chat-item-time">Jan 7</span>
                 </div>
                 <p class="chat-item-preview">${getPreview(person.kudos[0]?.text || 'No kudos yet')}</p>
             </div>
@@ -133,13 +133,13 @@ function renderMessages(kudos, avatarSrc) {
     }
 
     messages.innerHTML = `
-        <div class="date-divider"><span>Today</span></div>
+        <div class="date-divider"><span>January 7, 2026</span></div>
         ${kudos.map((kudo) => `
             <div class="message received">
                 <img src="${avatarSrc}" alt="" class="avatar">
                 <div class="message-bubble">
                     <div class="message-text">${formatText(kudo.text)}</div>
-                    <div class="message-time">6:06 pm</div>
+                    <div class="message-time">3:42 pm</div>
                 </div>
             </div>
         `).join('')}

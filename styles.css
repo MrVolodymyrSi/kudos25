@@ -15,16 +15,24 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
+    background-color: #f0f2f5;
     min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     display: flex;
-    max-width: 100%;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     background: #fff;
-    min-height: 100vh;
+    min-height: calc(100vh - 40px);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* ==========================================================================
@@ -377,7 +385,7 @@ body {
 .message-text {
     background: #ffffff;
     padding: 10px 14px;
-    border-radius: 18px;
+    border-radius: 8px 8px 8px 0;
     font-size: 14px;
     line-height: 1.4;
     color: #000000;
@@ -389,11 +397,11 @@ body {
 .message.sent .message-text {
     background: #5181b8;
     color: #ffffff;
-    border-bottom-right-radius: 4px;
+    border-radius: 8px 8px 0 8px;
 }
 
 .message.received .message-text {
-    border-bottom-left-radius: 4px;
+    border-radius: 8px 8px 8px 0;
 }
 
 .message-time {
@@ -416,12 +424,12 @@ body {
 }
 
 .date-divider span {
-    background: rgba(176, 203, 230, 0.6);
+    background: #93c3e6;
     padding: 6px 14px;
     border-radius: 12px;
     font-size: 13px;
-    color: #4a76a8;
-    font-weight: 400;
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .empty-state {
@@ -493,6 +501,15 @@ body {
    ========================================================================== */
 
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        min-height: calc(100vh - 20px);
+        border-radius: 4px;
+    }
+
     .sidebar {
         width: 80px;
     }
