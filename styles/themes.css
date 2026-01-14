@@ -64,7 +64,7 @@ body[data-theme="twitter"] {
     --notification-border: #a5d8ff;
 
     /* Typography */
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     --font-size-base: 15px;
     --font-size-sm: 13px;
     --font-size-xs: 12px;
@@ -194,7 +194,7 @@ body[data-theme="facebook"] {
     --notification-border: #cce4ff;
 
     /* Typography - Facebook uses slightly bolder weights */
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-size-base: 14px;
     --font-size-sm: 12px;
     --font-size-xs: 11px;
@@ -413,7 +413,7 @@ body[data-theme="instagram"] {
     --notification-border: #ffd6e3;
 
     /* Typography - Instagram uses cleaner, more modern typography */
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-size-base: 14px;
     --font-size-sm: 12px;
     --font-size-xs: 11px;

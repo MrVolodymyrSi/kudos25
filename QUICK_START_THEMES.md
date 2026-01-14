@@ -16,6 +16,7 @@
 Each theme has a **unique, handcrafted feel**:
 
 **Twitter Theme:**
+- Font: Roboto (professional, geometric)
 - Larger text (15px base)
 - Pill-shaped search bar
 - Medium spacing
@@ -23,6 +24,7 @@ Each theme has a **unique, handcrafted feel**:
 - 18px rounded message bubbles
 
 **Facebook Theme:**
+- Font: Inter (friendly, optimized for screens)
 - Compact design (14px base)
 - Smaller avatars and spacing
 - Highly rounded elements (20px bubbles)
@@ -31,6 +33,7 @@ Each theme has a **unique, handcrafted feel**:
 - Pill-shaped search (50px radius)
 
 **Instagram Theme:**
+- Font: Poppins (modern, creative)
 - More breathing room
 - Larger spacing and padding
 - Very rounded bubbles (24px)
@@ -174,6 +177,7 @@ index.html               ← Theme toggle UI
 
 | Feature | Twitter | Facebook | Instagram |
 |---------|---------|----------|-----------|
+| **Font Family** | Roboto | Inter | Poppins |
 | **Primary Color** | Blue #1da1f2 | Blue #0866ff | Pink #e1306c |
 | **Base Font Size** | 15px (larger) | 14px (compact) | 14px (standard) |
 | **Message Bubbles** | 18px rounded | 20px rounded | 24px rounded |
@@ -187,6 +191,7 @@ index.html               ← Theme toggle UI
 | **Special Feature** | Clean minimal | Red badges | Gradient messages |
 | **Unread Indicator** | Blue badge | Red badge | Gradient ring |
 | **Date Badge** | Rounded blue | Small rounded | Uppercase pink |
+| **Typography Feel** | Professional | Friendly | Creative |
 | **Vibe** | Professional | Social | Creative |
 
 ## Tips
