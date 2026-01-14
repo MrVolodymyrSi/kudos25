@@ -9,6 +9,7 @@ const searchInput = document.getElementById('searchInput');
 // State
 let selectedPersonId = null;
 let searchQuery = '';
+let isMobile = window.innerWidth < 768;
 
 // LocalStorage key for read state
 const STORAGE_KEY = 'kudos_read_state';
@@ -34,6 +35,33 @@ function markAsRead(personId) {
 function isRead(personId) {
     const readState = getReadState();
     return readState[personId] === true;
+}
+
+// Mobile view switching
+function showChatView() {
+    if (isMobile) {
+        document.querySelector('.sidebar').classList.add('hidden');
+        document.querySelector('.chat-area').classList.add('active');
+    }
+}
+
+function showSidebarView() {
+    if (isMobile) {
+        document.querySelector('.sidebar').classList.remove('hidden');
+        document.querySelector('.chat-area').classList.remove('active');
+    }
+}
+
+// Handle window resize
+function handleResize() {
+    const wasMobile = isMobile;
+    isMobile = window.innerWidth < 768;
+
+    if (wasMobile && !isMobile) {
+        // Switching from mobile to desktop
+        document.querySelector('.sidebar').classList.remove('hidden');
+        document.querySelector('.chat-area').classList.remove('active');
+    }
 }
 
 // Get preview text (first line, no newlines)
@@ -111,6 +139,9 @@ function selectPerson(id) {
 
     // Render messages
     renderMessages(person.kudos, person.avatar);
+
+    // Show chat view on mobile
+    showChatView();
 }
 
 // Format text with line breaks
@@ -150,8 +181,8 @@ function renderMessages(kudos, avatarSrc) {
 function init() {
     renderChatList();
 
-    // Select first person by default
-    if (kudosData.length > 0) {
+    // Select first person by default (only on desktop)
+    if (kudosData.length > 0 && !isMobile) {
         selectPerson(kudosData[0].id);
     }
 
@@ -162,6 +193,19 @@ function init() {
             renderChatList();
         });
     }
+
+    // Add back button handler for mobile
+    const chatHeader = document.querySelector('.chat-header');
+    if (chatHeader) {
+        chatHeader.addEventListener('click', (e) => {
+            if (isMobile && e.target === chatHeader) {
+                showSidebarView();
+            }
+        });
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', handleResize);
 }
 
 // Run on DOM ready

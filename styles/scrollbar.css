@@ -1,19 +1,44 @@
 /* Custom Scrollbar Styles */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+
+/* Desktop scrollbar */
+@media (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #c4c8cc;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #a8adb4;
+    }
 }
 
-::-webkit-scrollbar-track {
-    background: transparent;
-}
+/* Mobile - hide scrollbar but keep functionality */
+@media (max-width: 767px) {
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
 
-::-webkit-scrollbar-thumb {
-    background: #c4c8cc;
-    border-radius: 4px;
-}
+    /* Ensure smooth scrolling on mobile */
+    .chat-list,
+    .messages {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #a8adb4;
+    .chat-list::-webkit-scrollbar,
+    .messages::-webkit-scrollbar {
+        display: none;
+    }
 }
 
