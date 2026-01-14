@@ -1,0 +1,347 @@
+/* Theme Toggle Styles */
+.theme-toggle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #f0f2f5;
+    padding: 4px;
+    border-radius: 20px;
+    margin-left: auto;
+}
+
+.theme-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: #65676b;
+    padding: 0;
+}
+
+.theme-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+.theme-btn.active {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-btn svg {
+    pointer-events: none;
+}
+
+/* Twitter Theme (Default) */
+body[data-theme="twitter"] {
+    --primary-color: #1da1f2;
+    --primary-hover: #1a8cd8;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7f9f9;
+    --bg-gradient-start: #c5daf0;
+    --bg-gradient-end: #d9e7f5;
+    --text-primary: #0f1419;
+    --text-secondary: #536471;
+    --border-color: #eff3f4;
+    --message-bg: #1da1f2;
+    --message-text: #ffffff;
+    --received-message-bg: #eff3f4;
+    --received-message-text: #0f1419;
+    --chat-active-bg: #f7f9f9;
+    --chat-hover-bg: #f7f9f9;
+    --badge-bg: #1da1f2;
+    --date-badge-bg: #1da1f2;
+    --search-focus: #1da1f2;
+    --tab-active-color: #1da1f2;
+    --notification-bg: #d0ebff;
+    --notification-border: #a5d8ff;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body[data-theme="twitter"] .theme-btn[data-theme="twitter"] {
+    color: #1da1f2;
+}
+
+/* Facebook Theme */
+body[data-theme="facebook"] {
+    --primary-color: #0866ff;
+    --primary-hover: #0756d6;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f2f5;
+    --bg-gradient-start: #f0f2f5;
+    --bg-gradient-end: #e4e6eb;
+    --text-primary: #050505;
+    --text-secondary: #65676b;
+    --border-color: #e4e6eb;
+    --message-bg: #0866ff;
+    --message-text: #ffffff;
+    --received-message-bg: #f0f2f5;
+    --received-message-text: #050505;
+    --chat-active-bg: #e7f3ff;
+    --chat-hover-bg: #f2f2f2;
+    --badge-bg: #e41e3f;
+    --date-badge-bg: #0866ff;
+    --search-focus: #0866ff;
+    --tab-active-color: #0866ff;
+    --notification-bg: #e7f3ff;
+    --notification-border: #cce4ff;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body[data-theme="facebook"] .theme-btn[data-theme="facebook"] {
+    color: #0866ff;
+}
+
+body[data-theme="facebook"] .sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e4e6eb;
+}
+
+body[data-theme="facebook"] .search-box input {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+}
+
+body[data-theme="facebook"] .chat-item:hover {
+    background: #f2f2f2;
+}
+
+body[data-theme="facebook"] .chat-item.active {
+    background: #e7f3ff;
+}
+
+body[data-theme="facebook"] .messages {
+    background: linear-gradient(180deg, #f0f2f5 0%, #e4e6eb 100%);
+}
+
+body[data-theme="facebook"] .message.sent .message-text {
+    background: #0866ff;
+    border-radius: 18px;
+}
+
+body[data-theme="facebook"] .message.received .message-text {
+    background: #f0f2f5;
+    color: #050505;
+    border-radius: 18px;
+}
+
+body[data-theme="facebook"] .date-divider span {
+    background: #0866ff;
+}
+
+body[data-theme="facebook"] .chat-item-badge {
+    background: #e41e3f;
+}
+
+body[data-theme="facebook"] .tab.active {
+    color: #0866ff;
+}
+
+body[data-theme="facebook"] .tab.active::after {
+    background: #0866ff;
+}
+
+body[data-theme="facebook"] .notification-banner {
+    background: #e7f3ff;
+    border-bottom: 1px solid #cce4ff;
+}
+
+body[data-theme="facebook"] .notification-banner-text {
+    color: #0866ff;
+}
+
+/* Instagram Theme */
+body[data-theme="instagram"] {
+    --primary-color: #e1306c;
+    --primary-hover: #c13584;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-gradient-start: #fafafa;
+    --bg-gradient-end: #f5f5f5;
+    --text-primary: #262626;
+    --text-secondary: #8e8e8e;
+    --border-color: #dbdbdb;
+    --message-bg: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --message-text: #ffffff;
+    --received-message-bg: #efefef;
+    --received-message-text: #262626;
+    --chat-active-bg: #fafafa;
+    --chat-hover-bg: #fafafa;
+    --badge-bg: #e1306c;
+    --date-badge-bg: #e1306c;
+    --search-focus: #e1306c;
+    --tab-active-color: #262626;
+    --notification-bg: #fff5f8;
+    --notification-border: #ffd6e3;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body[data-theme="instagram"] .theme-btn[data-theme="instagram"] {
+    color: #e1306c;
+}
+
+body[data-theme="instagram"] .sidebar {
+    background: #ffffff;
+    border-right: 1px solid #dbdbdb;
+}
+
+body[data-theme="instagram"] .search-box input {
+    background-color: #efefef;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+}
+
+body[data-theme="instagram"] .search-box input:focus {
+    border-color: #a8a8a8;
+}
+
+body[data-theme="instagram"] .tabs {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+body[data-theme="instagram"] .tab.active {
+    color: #262626;
+    border-bottom: 2px solid #262626;
+}
+
+body[data-theme="instagram"] .tab.active::after {
+    background: #262626;
+}
+
+body[data-theme="instagram"] .chat-item {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+body[data-theme="instagram"] .chat-item:hover {
+    background: #fafafa;
+}
+
+body[data-theme="instagram"] .chat-item.active {
+    background: #fafafa;
+}
+
+body[data-theme="instagram"] .chat-header {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+body[data-theme="instagram"] .messages {
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+body[data-theme="instagram"] .message.sent .message-text {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+body[data-theme="instagram"] .message.received .message-text {
+    background: #efefef;
+    color: #262626;
+    border-radius: 22px;
+    border: 1px solid #dbdbdb;
+}
+
+body[data-theme="instagram"] .date-divider span {
+    background: #e1306c;
+    color: #ffffff;
+}
+
+body[data-theme="instagram"] .chat-item-badge {
+    background: #e1306c;
+}
+
+body[data-theme="instagram"] .notification-banner {
+    background: #fff5f8;
+    border-bottom: 1px solid #ffd6e3;
+}
+
+body[data-theme="instagram"] .notification-banner-text {
+    color: #c13584;
+}
+
+/* Apply theme CSS variables */
+body {
+    font-family: var(--font-family, 'Open Sans', sans-serif);
+}
+
+.container {
+    background: var(--bg-primary, #fff);
+}
+
+.sidebar {
+    background: var(--bg-primary, #ffffff);
+    border-right: 1px solid var(--border-color, #dfe1e5);
+}
+
+.search-box input {
+    border-color: var(--border-color, #d3d9de);
+}
+
+.search-box input:focus {
+    border-color: var(--search-focus, #5181b8);
+}
+
+.tab {
+    color: var(--tab-active-color, rgb(1, 70, 204));
+}
+
+.tab.active {
+    color: var(--tab-active-color, rgb(1, 70, 204));
+}
+
+.tab.active::after {
+    background: var(--tab-active-color, rgb(1, 70, 204));
+}
+
+.chat-item:hover {
+    background: var(--chat-hover-bg, #f7f8fa);
+}
+
+.chat-item.active {
+    background: var(--chat-active-bg, #edf2f6);
+}
+
+.chat-item-badge {
+    background: var(--badge-bg, #9ba3af);
+}
+
+.chat-header {
+    background: var(--bg-primary, #ffffff);
+    border-bottom: 1px solid var(--border-color, #dfe1e5);
+}
+
+.chat-name {
+    color: var(--text-primary, rgb(51, 51, 51));
+}
+
+.messages {
+    background: linear-gradient(180deg, var(--bg-gradient-start, #c5daf0) 0%, var(--bg-gradient-end, #d9e7f5) 100%);
+}
+
+.message.sent .message-text {
+    background: var(--message-bg, #5181b8);
+    color: var(--message-text, #ffffff);
+}
+
+.message.received .message-text {
+    background: var(--received-message-bg, #ffffff);
+    color: var(--received-message-text, #000000);
+}
+
+.date-divider span {
+    background: var(--date-badge-bg, #93c3e6);
+}
+
+.notification-banner {
+    background: var(--notification-bg, #d0e3f5);
+    border-bottom: 1px solid var(--notification-border, #c5d9ed);
+}
+

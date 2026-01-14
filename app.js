@@ -5,14 +5,17 @@ const chatName = document.getElementById('chatName');
 const chatAvatar = document.getElementById('chatAvatar');
 const notificationBanner = document.getElementById('notificationBanner');
 const searchInput = document.getElementById('searchInput');
+const themeToggle = document.getElementById('themeToggle');
 
 // State
 let selectedPersonId = null;
 let searchQuery = '';
 let isMobile = window.innerWidth < 768;
+let currentTheme = 'twitter';
 
-// LocalStorage key for read state
+// LocalStorage keys
 const STORAGE_KEY = 'kudos_read_state';
+const THEME_STORAGE_KEY = 'kudos_theme';
 
 // Get read state from localStorage
 function getReadState() {
@@ -35,6 +38,42 @@ function markAsRead(personId) {
 function isRead(personId) {
     const readState = getReadState();
     return readState[personId] === true;
+}
+
+// Theme Management
+function getTheme() {
+    try {
+        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        return savedTheme || 'twitter';
+    } catch (e) {
+        return 'twitter';
+    }
+}
+
+function setTheme(theme) {
+    currentTheme = theme;
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+
+    // Update active button
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === theme);
+    });
+}
+
+function initTheme() {
+    currentTheme = getTheme();
+    setTheme(currentTheme);
+
+    // Add click handlers to theme buttons
+    if (themeToggle) {
+        themeToggle.addEventListener('click', (e) => {
+            const btn = e.target.closest('.theme-btn');
+            if (btn && btn.dataset.theme) {
+                setTheme(btn.dataset.theme);
+            }
+        });
+    }
 }
 
 // Mobile view switching
@@ -179,6 +218,9 @@ function renderMessages(kudos, avatarSrc) {
 
 // Initialize
 function init() {
+    // Initialize theme first
+    initTheme();
+
     renderChatList();
 
     // Select first person by default (only on desktop)

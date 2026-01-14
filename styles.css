@@ -24,6 +24,9 @@
 /* Reusable components (avatars, indicators) */
 @import url('styles/components.css');
 
+/* Theme styles */
+@import url('styles/themes.css');
+
 /* Responsive breakpoints */
 @import url('styles/responsive.css');
 

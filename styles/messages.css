@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: linear-gradient(180deg, #c5daf0 0%, #d9e7f5 100%);
+    background: linear-gradient(180deg, var(--bg-gradient-start, #c5daf0) 0%, var(--bg-gradient-end, #d9e7f5) 100%);
 }
 
 /* Message Item */
@@ -43,20 +43,20 @@
 
 /* Message Text Bubble */
 .message-text {
-    background: #ffffff;
+    background: var(--received-message-bg, #ffffff);
     padding: 10px 14px;
     border-radius: 8px 8px 8px 0;
     font-size: 14px;
     line-height: 1.4;
-    color: #000000;
+    color: var(--received-message-text, #000000);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
     word-wrap: break-word;
     white-space: pre-wrap;
 }
 
 .message.sent .message-text {
-    background: #5181b8;
-    color: #ffffff;
+    background: var(--message-bg, #5181b8);
+    color: var(--message-text, #ffffff);
     border-radius: 8px 8px 0 8px;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .date-divider span {
-    background: #93c3e6;
+    background: var(--date-badge-bg, #93c3e6);
     padding: 6px 14px;
     border-radius: 12px;
     font-size: 13px;

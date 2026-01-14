@@ -1,24 +1,24 @@
 /* Sidebar Container Styles */
 .sidebar {
     width: 314px;
-    border-right: 1px solid #dfe1e5;
+    border-right: 1px solid var(--border-color, #dfe1e5);
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background: var(--bg-primary, #ffffff);
 }
 
 /* Search Box */
 .search-box {
     padding: 16px 18px;
-    border-bottom: 1px solid #e7e8ec;
+    border-bottom: 1px solid var(--border-color, #e7e8ec);
 }
 
 .search-box input {
     width: 100%;
     padding: 10px 14px 10px 40px;
-    border: 1px solid #d3d9de;
+    border: 1px solid var(--border-color, #d3d9de);
     border-radius: 8px;
-    background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23818c99" viewBox="0 0 16 16"><path d="M11.7 10.7l3.8 3.8-.7.7-3.8-3.8c-1 .8-2.2 1.3-3.5 1.3-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.3-.5 2.5-1.3 3.5zM7.5 2C5 2 3 4 3 6.5S5 11 7.5 11 12 9 12 6.5 10 2 7.5 2z"/></svg>') no-repeat 14px center;
+    background: var(--bg-primary, #ffffff) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23818c99" viewBox="0 0 16 16"><path d="M11.7 10.7l3.8 3.8-.7.7-3.8-3.8c-1 .8-2.2 1.3-3.5 1.3-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.3-.5 2.5-1.3 3.5zM7.5 2C5 2 3 4 3 6.5S5 11 7.5 11 12 9 12 6.5 10 2 7.5 2z"/></svg>') no-repeat 14px center;
     font-size: 14px;
     outline: none;
     transition: border-color 0.15s;
@@ -26,7 +26,7 @@
 }
 
 .search-box input:focus {
-    border-color: #5181b8;
+    border-color: var(--search-focus, #5181b8);
 }
 
 .search-box input::placeholder {
@@ -38,16 +38,16 @@
     display: flex;
     margin: 8px 4px;
     gap: 0;
-    border-bottom: 1px solid #e7e8ec;
+    border-bottom: 1px solid var(--border-color, #e7e8ec);
 }
 
 .tab {
     padding: 4px 8px;
     border: none;
-    background: #ffffff;
+    background: var(--bg-primary, #ffffff);
     font-size: 14px;
     font-weight: 600;
-    color: rgb(1, 70, 204);
+    color: var(--tab-active-color, rgb(1, 70, 204));
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.2s linear;
@@ -65,12 +65,12 @@
 }
 
 .tab:hover {
-    background: #f0f1f3;
+    background: var(--chat-hover-bg, #f0f1f3);
 }
 
 .tab.active {
-    background: #ffffff;
-    color: rgb(1, 70, 204);
+    background: var(--bg-primary, #ffffff);
+    color: var(--tab-active-color, rgb(1, 70, 204));
     font-weight: 600;
     border-radius: 4px;
 }
@@ -82,6 +82,6 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: rgb(1, 70, 204);
+    background: var(--tab-active-color, rgb(1, 70, 204));
 }
 

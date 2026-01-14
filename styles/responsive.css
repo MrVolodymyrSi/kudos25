@@ -154,6 +154,23 @@
         cursor: default;
     }
 
+    /* Theme toggle on mobile */
+    .theme-toggle {
+        gap: 4px;
+        padding: 3px;
+        margin-left: auto;
+    }
+
+    .theme-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .theme-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
     /* Notification banner */
     .notification-banner {
         padding: 10px 16px;
@@ -291,6 +308,22 @@
 
     .notification-banner-text {
         font-size: 12px;
+    }
+
+    /* Theme toggle on small mobile */
+    .theme-toggle {
+        gap: 2px;
+        padding: 2px;
+    }
+
+    .theme-btn {
+        width: 26px;
+        height: 26px;
+    }
+
+    .theme-btn svg {
+        width: 14px;
+        height: 14px;
     }
 }
 
