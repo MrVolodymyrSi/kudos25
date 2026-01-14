@@ -36,10 +36,9 @@
 /* Tabs Navigation */
 .tabs {
     display: flex;
-    padding: 0;
+    margin: 8px 4px;
     gap: 0;
     border-bottom: 1px solid #e7e8ec;
-    background: #fafbfc;
 }
 
 .tab {
