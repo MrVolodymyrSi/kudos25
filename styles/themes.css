@@ -40,6 +40,7 @@
 
 /* Twitter Theme (Default) */
 body[data-theme="twitter"] {
+    /* Colors */
     --primary-color: #1da1f2;
     --primary-hover: #1a8cd8;
     --bg-primary: #ffffff;
@@ -61,15 +62,115 @@ body[data-theme="twitter"] {
     --tab-active-color: #1da1f2;
     --notification-bg: #d0ebff;
     --notification-border: #a5d8ff;
+
+    /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-size-base: 15px;
+    --font-size-sm: 13px;
+    --font-size-xs: 12px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --line-height-tight: 1.3;
+    --line-height-normal: 1.5;
+    --letter-spacing: -0.01em;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 20px;
+    --spacing-2xl: 24px;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    --message-radius: 18px;
+    --avatar-radius: 50%;
+    --search-radius: 9999px;
+    --button-radius: 9999px;
+
+    /* Sizes */
+    --avatar-sm: 32px;
+    --avatar-md: 40px;
+    --avatar-lg: 48px;
+    --input-height: 44px;
+    --button-height: 36px;
+    --sidebar-width: 320px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --message-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.2s ease;
+    --transition-slow: 0.3s ease;
+
+    /* Other */
+    --border-width: 1px;
+    --gap-sm: 8px;
+    --gap-md: 12px;
+    --gap-lg: 16px;
 }
 
 body[data-theme="twitter"] .theme-btn[data-theme="twitter"] {
     color: #1da1f2;
 }
 
+body[data-theme="twitter"] .search-box input {
+    border-radius: var(--search-radius);
+    font-size: var(--font-size-base);
+    height: var(--input-height);
+    letter-spacing: var(--letter-spacing);
+}
+
+body[data-theme="twitter"] .chat-item {
+    padding: var(--spacing-md) var(--spacing-lg);
+    transition: background var(--transition-fast);
+}
+
+body[data-theme="twitter"] .chat-item-name {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing);
+}
+
+body[data-theme="twitter"] .message-text {
+    border-radius: var(--message-radius);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    box-shadow: var(--message-shadow);
+    letter-spacing: var(--letter-spacing);
+}
+
+body[data-theme="twitter"] .avatar {
+    border-radius: var(--avatar-radius);
+}
+
+body[data-theme="twitter"] .date-divider span {
+    border-radius: var(--radius-xl);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+    padding: 6px 16px;
+}
+
+body[data-theme="twitter"] .tab {
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-normal);
+    border-radius: var(--radius-md);
+}
+
 /* Facebook Theme */
 body[data-theme="facebook"] {
+    /* Colors */
     --primary-color: #0866ff;
     --primary-hover: #0756d6;
     --bg-primary: #ffffff;
@@ -91,7 +192,63 @@ body[data-theme="facebook"] {
     --tab-active-color: #0866ff;
     --notification-bg: #e7f3ff;
     --notification-border: #cce4ff;
+
+    /* Typography - Facebook uses slightly bolder weights */
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-size-base: 14px;
+    --font-size-sm: 12px;
+    --font-size-xs: 11px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.4;
+    --letter-spacing: 0;
+
+    /* Spacing - Facebook is more compact */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 10px;
+    --spacing-lg: 12px;
+    --spacing-xl: 16px;
+    --spacing-2xl: 20px;
+
+    /* Border Radius - Facebook loves rounded corners */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 20px;
+    --radius-full: 9999px;
+    --message-radius: 20px;
+    --avatar-radius: 50%;
+    --search-radius: 50px;
+    --button-radius: 6px;
+
+    /* Sizes - Facebook uses slightly smaller elements */
+    --avatar-sm: 28px;
+    --avatar-md: 36px;
+    --avatar-lg: 40px;
+    --input-height: 40px;
+    --button-height: 32px;
+    --sidebar-width: 300px;
+
+    /* Shadows - Facebook uses softer shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+    --message-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+
+    /* Transitions - Facebook is snappier */
+    --transition-fast: 0.1s ease;
+    --transition-normal: 0.15s ease;
+    --transition-slow: 0.2s ease;
+
+    /* Other */
+    --border-width: 1px;
+    --gap-sm: 6px;
+    --gap-md: 10px;
+    --gap-lg: 12px;
 }
 
 body[data-theme="facebook"] .theme-btn[data-theme="facebook"] {
@@ -103,10 +260,44 @@ body[data-theme="facebook"] .sidebar {
     border-right: 1px solid #e4e6eb;
 }
 
+body[data-theme="facebook"] .search-box {
+    padding: var(--spacing-lg);
+}
+
 body[data-theme="facebook"] .search-box input {
     background-color: #f0f2f5;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--search-radius);
+    padding: 10px 16px 10px 40px;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    height: var(--input-height);
+    transition: background var(--transition-fast);
+}
+
+body[data-theme="facebook"] .search-box input:focus {
+    background-color: #e4e6eb;
+}
+
+body[data-theme="facebook"] .chat-item {
+    padding: var(--spacing-md) var(--spacing-lg);
+    gap: var(--gap-md);
+    transition: background var(--transition-fast);
+}
+
+body[data-theme="facebook"] .chat-item .avatar {
+    width: var(--avatar-lg);
+    height: var(--avatar-lg);
+}
+
+body[data-theme="facebook"] .chat-item-name {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+}
+
+body[data-theme="facebook"] .chat-item-preview {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
 }
 
 body[data-theme="facebook"] .chat-item:hover {
@@ -119,25 +310,55 @@ body[data-theme="facebook"] .chat-item.active {
 
 body[data-theme="facebook"] .messages {
     background: linear-gradient(180deg, #f0f2f5 0%, #e4e6eb 100%);
+    padding: var(--spacing-xl);
+}
+
+body[data-theme="facebook"] .message {
+    gap: var(--gap-sm);
+}
+
+body[data-theme="facebook"] .message .avatar {
+    width: var(--avatar-sm);
+    height: var(--avatar-sm);
 }
 
 body[data-theme="facebook"] .message.sent .message-text {
     background: #0866ff;
-    border-radius: 18px;
+    border-radius: var(--message-radius);
+    font-size: var(--font-size-base);
+    padding: 8px 12px;
+    box-shadow: var(--message-shadow);
 }
 
 body[data-theme="facebook"] .message.received .message-text {
     background: #f0f2f5;
     color: #050505;
-    border-radius: 18px;
+    border-radius: var(--message-radius);
+    font-size: var(--font-size-base);
+    padding: 8px 12px;
+    box-shadow: var(--message-shadow);
 }
 
 body[data-theme="facebook"] .date-divider span {
     background: #0866ff;
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xs);
+    padding: 4px 12px;
 }
 
 body[data-theme="facebook"] .chat-item-badge {
     background: #e41e3f;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    font-weight: var(--font-weight-semibold);
+}
+
+body[data-theme="facebook"] .tab {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    border-radius: var(--button-radius);
 }
 
 body[data-theme="facebook"] .tab.active {
@@ -146,19 +367,29 @@ body[data-theme="facebook"] .tab.active {
 
 body[data-theme="facebook"] .tab.active::after {
     background: #0866ff;
+    height: 3px;
+    border-radius: 2px 2px 0 0;
 }
 
 body[data-theme="facebook"] .notification-banner {
     background: #e7f3ff;
     border-bottom: 1px solid #cce4ff;
+    padding: var(--spacing-md) var(--spacing-xl);
 }
 
 body[data-theme="facebook"] .notification-banner-text {
     color: #0866ff;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+body[data-theme="facebook"] .chat-header {
+    padding: var(--spacing-md) var(--spacing-xl);
 }
 
 /* Instagram Theme */
 body[data-theme="instagram"] {
+    /* Colors */
     --primary-color: #e1306c;
     --primary-hover: #c13584;
     --bg-primary: #ffffff;
@@ -180,7 +411,63 @@ body[data-theme="instagram"] {
     --tab-active-color: #262626;
     --notification-bg: #fff5f8;
     --notification-border: #ffd6e3;
+
+    /* Typography - Instagram uses cleaner, more modern typography */
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-size-base: 14px;
+    --font-size-sm: 12px;
+    --font-size-xs: 11px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --line-height-tight: 1.3;
+    --line-height-normal: 1.5;
+    --letter-spacing: 0.01em;
+
+    /* Spacing - Instagram has more breathing room */
+    --spacing-xs: 6px;
+    --spacing-sm: 10px;
+    --spacing-md: 14px;
+    --spacing-lg: 18px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+
+    /* Border Radius - Instagram loves high rounded corners */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    --message-radius: 24px;
+    --avatar-radius: 50%;
+    --search-radius: 8px;
+    --button-radius: 8px;
+
+    /* Sizes - Instagram uses consistent medium sizes */
+    --avatar-sm: 32px;
+    --avatar-md: 44px;
+    --avatar-lg: 56px;
+    --input-height: 36px;
+    --button-height: 32px;
+    --sidebar-width: 310px;
+
+    /* Shadows - Instagram uses subtle, refined shadows */
+    --shadow-sm: 0 0 5px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --message-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+
+    /* Transitions - Instagram is smooth and elegant */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Other */
+    --border-width: 1px;
+    --gap-sm: 10px;
+    --gap-md: 14px;
+    --gap-lg: 18px;
 }
 
 body[data-theme="instagram"] .theme-btn[data-theme="instagram"] {
@@ -192,31 +479,79 @@ body[data-theme="instagram"] .sidebar {
     border-right: 1px solid #dbdbdb;
 }
 
+body[data-theme="instagram"] .search-box {
+    padding: var(--spacing-lg);
+}
+
 body[data-theme="instagram"] .search-box input {
     background-color: #efefef;
     border: 1px solid #dbdbdb;
-    border-radius: 8px;
+    border-radius: var(--search-radius);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    height: var(--input-height);
+    padding: 8px 12px 8px 38px;
+    letter-spacing: var(--letter-spacing);
+    transition: all var(--transition-fast);
 }
 
 body[data-theme="instagram"] .search-box input:focus {
     border-color: #a8a8a8;
+    background-color: #ffffff;
 }
 
 body[data-theme="instagram"] .tabs {
     border-bottom: 1px solid #dbdbdb;
+    padding: 0 var(--spacing-lg);
+}
+
+body[data-theme="instagram"] .tab {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-md);
 }
 
 body[data-theme="instagram"] .tab.active {
     color: #262626;
-    border-bottom: 2px solid #262626;
+    border-bottom: 1px solid #262626;
 }
 
 body[data-theme="instagram"] .tab.active::after {
     background: #262626;
+    height: 1px;
 }
 
 body[data-theme="instagram"] .chat-item {
     border-bottom: 1px solid #dbdbdb;
+    padding: var(--spacing-md) var(--spacing-lg);
+    gap: var(--gap-md);
+    transition: background var(--transition-fast);
+}
+
+body[data-theme="instagram"] .chat-item .avatar {
+    width: var(--avatar-md);
+    height: var(--avatar-md);
+    border: 2px solid transparent;
+    transition: border-color var(--transition-normal);
+}
+
+body[data-theme="instagram"] .chat-item:not(.read) .avatar {
+    border: 2px solid #e1306c;
+    padding: 2px;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box;
+}
+
+body[data-theme="instagram"] .chat-item-name {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing);
+}
+
+body[data-theme="instagram"] .chat-item-preview {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: var(--line-height-tight);
 }
 
 body[data-theme="instagram"] .chat-item:hover {
@@ -229,76 +564,163 @@ body[data-theme="instagram"] .chat-item.active {
 
 body[data-theme="instagram"] .chat-header {
     border-bottom: 1px solid #dbdbdb;
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+body[data-theme="instagram"] .chat-header .avatar {
+    width: var(--avatar-md);
+    height: var(--avatar-md);
 }
 
 body[data-theme="instagram"] .messages {
     background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+    padding: var(--spacing-xl);
+    gap: var(--gap-md);
+}
+
+body[data-theme="instagram"] .message {
+    gap: var(--gap-sm);
+}
+
+body[data-theme="instagram"] .message .avatar {
+    width: var(--avatar-sm);
+    height: var(--avatar-sm);
 }
 
 body[data-theme="instagram"] .message.sent .message-text {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: #ffffff;
-    border-radius: 22px;
+    border-radius: var(--message-radius);
     border: 1px solid rgba(0, 0, 0, 0.04);
+    font-size: var(--font-size-base);
+    padding: 10px 16px;
+    box-shadow: var(--message-shadow);
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
 }
 
 body[data-theme="instagram"] .message.received .message-text {
     background: #efefef;
     color: #262626;
-    border-radius: 22px;
+    border-radius: var(--message-radius);
     border: 1px solid #dbdbdb;
+    font-size: var(--font-size-base);
+    padding: 10px 16px;
+    box-shadow: var(--message-shadow);
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
+}
+
+body[data-theme="instagram"] .message-time {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-normal);
+}
+
+body[data-theme="instagram"] .date-divider {
+    padding: var(--spacing-xl) 0;
 }
 
 body[data-theme="instagram"] .date-divider span {
     background: #e1306c;
     color: #ffffff;
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xs);
+    padding: 5px 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 body[data-theme="instagram"] .chat-item-badge {
     background: #e1306c;
+    min-width: 20px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
 }
 
 body[data-theme="instagram"] .notification-banner {
     background: #fff5f8;
     border-bottom: 1px solid #ffd6e3;
+    padding: var(--spacing-md) var(--spacing-xl);
 }
 
 body[data-theme="instagram"] .notification-banner-text {
     color: #c13584;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing);
 }
 
 /* Apply theme CSS variables */
 body {
     font-family: var(--font-family, 'Open Sans', sans-serif);
+    font-size: var(--font-size-base, 15px);
+    line-height: var(--line-height-normal, 1.5);
+    letter-spacing: var(--letter-spacing, 0);
 }
 
 .container {
     background: var(--bg-primary, #fff);
+    transition: background var(--transition-normal, 0.2s ease);
 }
 
 .sidebar {
     background: var(--bg-primary, #ffffff);
-    border-right: 1px solid var(--border-color, #dfe1e5);
+    border-right: var(--border-width, 1px) solid var(--border-color, #dfe1e5);
+    width: var(--sidebar-width, 314px);
+}
+
+.search-box {
+    padding: var(--spacing-lg, 16px) var(--spacing-lg, 18px);
 }
 
 .search-box input {
     border-color: var(--border-color, #d3d9de);
+    border-radius: var(--search-radius, 8px);
+    font-size: var(--font-size-base, 14px);
+    height: var(--input-height, 44px);
+    transition: border-color var(--transition-fast, 0.15s);
 }
 
 .search-box input:focus {
     border-color: var(--search-focus, #5181b8);
 }
 
+.tabs {
+    padding: 0 var(--spacing-xs, 4px);
+    gap: var(--gap-sm, 8px);
+}
+
 .tab {
     color: var(--tab-active-color, rgb(1, 70, 204));
+    font-size: var(--font-size-sm, 13px);
+    font-weight: var(--font-weight-semibold, 600);
+    padding: var(--spacing-xs, 4px) var(--spacing-sm, 8px);
+    border-radius: var(--button-radius, 4px);
+    transition: all var(--transition-normal, 0.2s);
 }
 
 .tab.active {
     color: var(--tab-active-color, rgb(1, 70, 204));
+    font-weight: var(--font-weight-bold, 700);
 }
 
 .tab.active::after {
     background: var(--tab-active-color, rgb(1, 70, 204));
+}
+
+.chat-list {
+    gap: 0;
+}
+
+.chat-item {
+    padding: var(--spacing-md, 12px) var(--spacing-lg, 18px);
+    gap: var(--gap-md, 12px);
+    transition: background var(--transition-fast, 0.1s);
 }
 
 .chat-item:hover {
@@ -309,21 +731,70 @@ body {
     background: var(--chat-active-bg, #edf2f6);
 }
 
+.chat-item .avatar {
+    width: var(--avatar-lg, 48px);
+    height: var(--avatar-lg, 48px);
+    border-radius: var(--avatar-radius, 50%);
+}
+
+.chat-item-name {
+    font-size: var(--font-size-base, 16px);
+    font-weight: var(--font-weight-bold, 700);
+    color: var(--text-primary, rgb(51, 51, 51));
+}
+
+.chat-item-preview {
+    font-size: var(--font-size-sm, 13px);
+    color: var(--text-secondary, #6d7885);
+}
+
 .chat-item-badge {
     background: var(--badge-bg, #9ba3af);
+    font-size: var(--font-size-xs, 11px);
+    font-weight: var(--font-weight-semibold, 600);
 }
 
 .chat-header {
     background: var(--bg-primary, #ffffff);
-    border-bottom: 1px solid var(--border-color, #dfe1e5);
+    border-bottom: var(--border-width, 1px) solid var(--border-color, #dfe1e5);
+    padding: var(--spacing-lg, 14px) var(--spacing-xl, 20px);
+    gap: var(--gap-md, 12px);
+}
+
+.chat-header .avatar {
+    width: var(--avatar-md, 40px);
+    height: var(--avatar-md, 40px);
+    border-radius: var(--avatar-radius, 50%);
 }
 
 .chat-name {
     color: var(--text-primary, rgb(51, 51, 51));
+    font-size: var(--font-size-base, 16px);
+    font-weight: var(--font-weight-bold, 700);
 }
 
 .messages {
     background: linear-gradient(180deg, var(--bg-gradient-start, #c5daf0) 0%, var(--bg-gradient-end, #d9e7f5) 100%);
+    padding: var(--spacing-xl, 20px);
+    gap: var(--gap-sm, 8px);
+}
+
+.message {
+    gap: var(--gap-md, 10px);
+}
+
+.message .avatar {
+    width: var(--avatar-sm, 36px);
+    height: var(--avatar-sm, 36px);
+    border-radius: var(--avatar-radius, 50%);
+}
+
+.message-text {
+    font-size: var(--font-size-base, 14px);
+    line-height: var(--line-height-normal, 1.4);
+    border-radius: var(--message-radius, 8px);
+    padding: 10px 14px;
+    box-shadow: var(--message-shadow, 0 1px 2px rgba(0, 0, 0, 0.08));
 }
 
 .message.sent .message-text {
@@ -336,12 +807,31 @@ body {
     color: var(--received-message-text, #000000);
 }
 
+.message-time {
+    font-size: var(--font-size-xs, 12px);
+    color: var(--text-secondary, #6d7885);
+}
+
+.date-divider {
+    padding: var(--spacing-lg, 16px) 0;
+}
+
 .date-divider span {
     background: var(--date-badge-bg, #93c3e6);
+    font-size: var(--font-size-sm, 13px);
+    font-weight: var(--font-weight-bold, 700);
+    border-radius: var(--radius-lg, 12px);
+    padding: 6px 14px;
 }
 
 .notification-banner {
     background: var(--notification-bg, #d0e3f5);
-    border-bottom: 1px solid var(--notification-border, #c5d9ed);
+    border-bottom: var(--border-width, 1px) solid var(--notification-border, #c5d9ed);
+    padding: var(--spacing-md, 10px) var(--spacing-xl, 20px);
+}
+
+.notification-banner-text {
+    color: var(--primary-color, #002366);
+    font-size: var(--font-size-sm, 14px);
 }
 

@@ -1,20 +1,49 @@
-# Quick Start - Theme System
+# Quick Start - Enhanced Theme System
 
 ## For Users
 
 ### Switching Themes
 1. Look at the **top-right corner** of the chat header
 2. You'll see **3 circular buttons** with icons:
-   - 🐦 **X icon** = Twitter theme (blue)
-   - 👥 **F icon** = Facebook theme (blue)
-   - 📸 **Camera icon** = Instagram theme (pink/gradient)
+   - 🐦 **X icon** = Twitter theme (blue, clean)
+   - 👥 **F icon** = Facebook theme (blue, compact, rounded)
+   - 📸 **Camera icon** = Instagram theme (pink, spacious, gradient)
 3. **Click any button** to switch themes instantly
 4. Your choice is **automatically saved**
+
+### Theme Differences
+
+Each theme has a **unique, handcrafted feel**:
+
+**Twitter Theme:**
+- Larger text (15px base)
+- Pill-shaped search bar
+- Medium spacing
+- Clean, professional aesthetic
+- 18px rounded message bubbles
+
+**Facebook Theme:**
+- Compact design (14px base)
+- Smaller avatars and spacing
+- Highly rounded elements (20px bubbles)
+- Red notification badges
+- Snappy transitions (0.1s)
+- Pill-shaped search (50px radius)
+
+**Instagram Theme:**
+- More breathing room
+- Larger spacing and padding
+- Very rounded bubbles (24px)
+- Gradient message bubbles 🌈
+- Elegant cubic-bezier transitions
+- Uppercase date badges
+- Story-style avatar rings for unread
 
 ### On Mobile
 - The buttons are **smaller but still easy to tap**
 - Works great on phones from 320px width upwards
 - **Touch-friendly** design
+- All theme differences preserved on mobile
 
 ## For Developers
 
@@ -41,13 +70,58 @@ initTheme();
 ```
 
 ### CSS Variables
-Each theme sets these variables:
+Each theme defines **70+ comprehensive variables** for complete customization:
+
 ```css
 body[data-theme="twitter"] {
+    /* Colors (14 variables) */
     --primary-color: #1da1f2;
-    --bg-primary: #ffffff;
-    --message-bg: #1da1f2;
-    /* etc... */
+    --text-primary: #0f1419;
+    --border-color: #eff3f4;
+    /* ... and more */
+    
+    /* Typography (9 variables) */
+    --font-family: -apple-system, ...;
+    --font-size-base: 15px;
+    --font-weight-bold: 700;
+    --line-height-normal: 1.5;
+    --letter-spacing: -0.01em;
+    /* ... and more */
+    
+    /* Spacing (6 variables) */
+    --spacing-xs: 4px;
+    --spacing-md: 12px;
+    --spacing-xl: 20px;
+    /* ... and more */
+    
+    /* Border Radius (9 variables) */
+    --radius-sm: 4px;
+    --message-radius: 18px;
+    --search-radius: 9999px;
+    --avatar-radius: 50%;
+    /* ... and more */
+    
+    /* Sizes (6 variables) */
+    --avatar-sm: 32px;
+    --avatar-md: 40px;
+    --input-height: 44px;
+    --sidebar-width: 320px;
+    /* ... and more */
+    
+    /* Shadows (4 variables) */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --message-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    /* ... and more */
+    
+    /* Transitions (3 variables) */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.2s ease;
+    /* ... and more */
+    
+    /* Other (6 variables) */
+    --border-width: 1px;
+    --gap-md: 12px;
+    /* ... and more */
 }
 ```
 
@@ -56,6 +130,11 @@ Use in your CSS:
 .my-element {
     background: var(--primary-color);
     color: var(--text-primary);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
 }
 ```
 
@@ -96,10 +175,18 @@ index.html               ← Theme toggle UI
 | Feature | Twitter | Facebook | Instagram |
 |---------|---------|----------|-----------|
 | **Primary Color** | Blue #1da1f2 | Blue #0866ff | Pink #e1306c |
-| **Message Bubbles** | 8px rounded | 18px rounded | 22px rounded |
-| **Search Bar** | Standard | Pill-shaped | Standard |
-| **Badge Color** | Blue | Red | Pink |
+| **Base Font Size** | 15px (larger) | 14px (compact) | 14px (standard) |
+| **Message Bubbles** | 18px rounded | 20px rounded | 24px rounded |
+| **Search Bar** | Pill (9999px) | Pill (50px) | Square (8px) |
+| **Avatar Size** | 48px (large) | 40px (medium) | 44px (larger) |
+| **Badge Color** | Blue | Red #e41e3f | Pink |
+| **Spacing** | Medium | Compact | Spacious |
+| **Transitions** | 0.2s ease | 0.1s ease (snappy) | 0.3s cubic-bezier (smooth) |
+| **Shadows** | Medium | Subtle | Refined |
+| **Letter Spacing** | -0.01em (tight) | 0 (normal) | 0.01em (airy) |
 | **Special Feature** | Clean minimal | Red badges | Gradient messages |
+| **Unread Indicator** | Blue badge | Red badge | Gradient ring |
+| **Date Badge** | Rounded blue | Small rounded | Uppercase pink |
 | **Vibe** | Professional | Social | Creative |
 
 ## Tips
